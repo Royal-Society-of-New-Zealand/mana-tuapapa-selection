@@ -2,7 +2,7 @@
 
 To accomplish diversity in the Mana Tūāpapa Future Leader Fellowship selection process, the selection will utilise a stratified ballot system (illustrated below). 
 
-![Mana Tūāpapa Future Leader Fellowship Selection](images/mana_tuapapa-selection-flow.png "Flow diagramme for the selection of Mana Tūāpapa Future Leader Fellowships")
+![Mana Tūāpapa Future Leader Fellowship Selection](/mana_tuapapa-selection-flow.png "Flow diagramme for the selection of Mana Tūāpapa Future Leader Fellowships")
 
 Note: Full arrows denote the path for successful applications at each stage. Black dashed arrows denote the path for applications that have not been selected in either the Māori or Pacific Ballots and have been re-distributed into subsequent ballots. This selection process is based on that used for the [MBIE Science Whitinga Fellowship](https://github.com/Royal-Society-of-New-Zealand/whitinga-selection).
 
