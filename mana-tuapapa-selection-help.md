@@ -7,7 +7,7 @@ Within the actual ballot, the Mana Tūāpapa Future Leader Fellowship Selection 
 
 ## Usage
 
-mana_tuapapa_selection_excellence(dataframe, ma = 4, pa = 2, ff = 10, fe = 20, threshold = 3.5)
+mana_tuapapa_fellow_selection(dataframe, ma = 4, pa = 2, ff = 10, fe = 20, threshold = 3.5)
 
 ## Arguments
 
@@ -16,11 +16,11 @@ mana_tuapapa_selection_excellence(dataframe, ma = 4, pa = 2, ff = 10, fe = 20, t
 *pa*        the target minimum draw for Pacific Nation fellows  
 *ff*        the target minimum draw for female fellows  
 *fe*        the total number of fellows to draw  
-*threshold* the minimum excellence score to be considered for the ballot.
+*threshold* the minimum excellence score to be considered for the ballot (threshold value is determined by the panel chair upon review of the applicant proposals)
 
 ## Details
 
-The *mana_tuapapa_selection_excellence* function makes extensive use the dplyr library's slice and filter functions to draw fellows from the different applicant groups.  
+The *mana_tuapapa_fellow_selection* function makes extensive use the dplyr library's slice and filter functions to draw fellows from the different applicant groups.  
 Some degree of sense is required of inputs; under plausible real-world applicant populations, it is guaranteed to satisfy Māori and Pacific Nation targets, and unless ma+pa is set high and/or GD population large and a very very unlucky draw occurs, the female fellow target.  
 
 ## Value
@@ -35,24 +35,24 @@ As a side-effect this function creates 'unchosen_applicant_list', an ordered dat
 	require(dplyr)
 	require(stringr)
 
+
 	# Create synthetic population
 	demo_population <-uncount(data.frame(Gender = rep(c("M", "F", "GD", "NR"), times=4), Ethnicity = rep(c("Ma", "Pa", "Ma/Pa", "Pool"), each=4), 
                                      Count = c(9,15,3,0,3,3,0,3,3,3,3,0,411,408,3,24)), weights = Count, .id = "id")  %>% mutate(Score = runif(n=891, min = 3, max = 5))
 
 	# Simulate selection
 
-	example_selection <- mana_tuapapa_selection_excellence(demo_population)
+	example_selection <- mana_tuapapa_fellow_selection(demo_population)
 	print(addmargins(xtabs(~Gender + Ethnicity, example_selection)))
 
-	#       Ethnicity
+	#   Ethnicity
 	# Gender Ma Ma/Pa Pa Pool Sum
-	# F    1     2  0    7  10
-	# GD   0     1  0    0   1
-	# M    0     1  0    7   8
-	# NR   0     0  1    0   1
-	# Sum  1     4  1   14  20
+	#   F    1     0  1    9  11
+	#   M    2     1  0    5   8
+	#   NR   0     0  1    0   1
+	#   Sum  3     1  2   14  20
 
 	summary(example_selection$Score)
 
 	# Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-	# 3.544   3.880   4.345   4.266   4.650   4.903 
+	# 3.597   3.849   4.093   4.228   4.644   4.974 
