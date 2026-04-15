@@ -11,13 +11,13 @@ mana_tuapapa_fellow_selection <- function(dataframe, ma = 4, pa = 2, ff = 10, fe
   # shuffle dataframe once only
   dataframe <- dataframe[sample(1:nrow(dataframe)),]
   
-  # draw Māori fellows, i.e. Ethnicity is flagged as Maori or Maori/Pacific Nations
+  # draw Māori fellows, i.e. Ethnicity is flagged as Maori or Maori/Pacific Peoples
   maori_fellows <- dataframe %>% filter(str_detect(Ethnicity, "Ma")) %>% slice_head(n = ma) %>% mutate(ballot = "M\u101ori")
   
   # exclude already drawn fellows from the pool
   pool <- dataframe %>% anti_join(maori_fellows, by = c("Gender", "Ethnicity", "id"))
   
-  # draw Pacific Nations fellows, i.e. Ethnicity is flagged as Pacific Nations or Maori/Pacific Nations
+  # draw Pacific Peoples fellows, i.e. Ethnicity is flagged as Pacific Peoples or Maori/Pacific Peoples
   pacific_fellows <- pool %>% filter(str_detect(Ethnicity, "Pa")) %>% slice_head(n = pa) %>% mutate(ballot = "Pacific")
   
   # join already drawn fellows
