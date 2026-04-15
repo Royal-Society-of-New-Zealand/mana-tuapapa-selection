@@ -4,7 +4,7 @@ To accomplish diversity in the Mana Tūāpapa Future Leader Fellowship selection
 
 ![Mana Tūāpapa Future Leader Fellowship Selection](/mana-tūāpapa-selection-flow.png "Flow diagram for the selection of Mana Tūāpapa Future Leader Fellowships")
 
-Note: Full arrows denote the path for successful applications at each stage. This selection process has been modified from that used for the [MBIE Science Whitinga Fellowship](https://github.com/Royal-Society-of-New-Zealand/whitinga-selection).
+Note: Orange boxes refer to activities related to the selection algorithm described on Github. *Fellows may include additional Māori, Pacific Peoples and female applicants depending on the demographic proportions of the applicant pool and the randomly generated list.
 
 In the 2026 round we are refining the way we conduct the selection ballot. Rather than having separate pools from which to ballot Māori and Pacific Persons we will make the selection from a single randomly sorted applicant pool.  
 
