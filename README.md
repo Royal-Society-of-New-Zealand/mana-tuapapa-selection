@@ -14,4 +14,4 @@ This selection ballot has been designed to ensure that the likelihood of a gende
 
 This equitable selection approach aligns with the [MBIE Diversity in Science Statement](https://www.mbie.govt.nz/assets/95e033c7bc/diversity-in-science-statement.pdf) and [Royal Society Te Apārangi’s public diversity policy](https://www.royalsociety.org.nz/who-we-are/our-goals/diversity/royal-society-te-aparangi-diversity-policy/).
 
-This repository contains the algorithm, Mana_tuapapa_fellow_selection.r, that the Society will follow to draw the 20 successful Mana Tūāpapa Fellows.
+This repository contains the algorithm, mana_tuapapa_fellow_selection.R, that the Society will follow to draw the 20 successful Mana Tūāpapa Fellows.
